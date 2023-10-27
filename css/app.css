@@ -128,7 +128,7 @@ body {
 
 .main {
     background: lightgrey;
-    margin: 1em 0;
+    margin: 0 0 1em;
     text-align: center;
 }
 .seccion{
@@ -189,9 +189,7 @@ body {
 .seccion .grid{
     width: 90%;
     max-width: 40em;
-    background: lightcoral;
     margin: 1em 0;
-
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 1em;
@@ -222,7 +220,8 @@ body {
 .seccion .h4 {
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter:  blur(1rem);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -231,6 +230,14 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+
+    color: white;
+
+    opacity: 1;
+    transition: all .5s ease;
+}
+.seccion .h4:hover {
+    opacity: 1;
 }
 
 .trabajos .h2 {
