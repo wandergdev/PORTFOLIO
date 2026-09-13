@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { profile } from "@/data/portfolio";
-import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
+import { BracketsIcon } from "./icons";
 
 const links = [
   { href: "#about", label: "Sobre mí" },
@@ -13,11 +12,14 @@ const links = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-zinc-950/70 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="#top"
-          className="font-[family-name:var(--font-heading)] text-base font-medium tracking-tight text-zinc-100"
+          className="flex items-center gap-2 font-[family-name:var(--font-heading)] text-base font-medium tracking-tight text-zinc-100"
         >
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/15 text-indigo-400">
+            <BracketsIcon className="h-4 w-4" />
+          </span>
           Wander Genao
         </Link>
 
@@ -33,33 +35,12 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-5 text-zinc-500">
-          <a
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="transition-colors hover:text-zinc-100"
-          >
-            <GitHubIcon className="h-[18px] w-[18px]" />
-          </a>
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="transition-colors hover:text-zinc-100"
-          >
-            <LinkedInIcon className="h-[18px] w-[18px]" />
-          </a>
-          <a
-            href={`mailto:${profile.email}`}
-            aria-label="Email"
-            className="transition-colors hover:text-zinc-100"
-          >
-            <MailIcon className="h-[18px] w-[18px]" />
-          </a>
-        </div>
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-400"
+        >
+          Contactarme
+        </a>
       </div>
     </header>
   );

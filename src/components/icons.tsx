@@ -30,6 +30,23 @@ export function MailIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function BracketsIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="m8 6-5 6 5 6M16 6l5 6-5 6" />
+    </svg>
+  );
+}
+
 export function ArrowUpRightIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg

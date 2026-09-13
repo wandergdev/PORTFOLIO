@@ -6,6 +6,10 @@ export const profile = {
   email: "wanderg.dev@gmail.com",
   github: "https://github.com/wandergdev",
   linkedin: "https://www.linkedin.com/in/wanderg-dev/",
+  /** Set to a real path (e.g. "/cv.pdf" in /public) once the CV file is added. */
+  cvUrl: null as string | null,
+  /** Set to a real path (e.g. "/avatar.jpg" in /public) once the photo is added. */
+  avatarUrl: null as string | null,
   bio: [
     "Soy Ingeniero en Sistemas de Computación (UCATECI, La Vega, RD) enfocado en construir backends robustos y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
     "He trabajado tanto en entornos corporativos regulados —desarrollando soluciones internas para un banco con C#, .NET, Entity Framework y Blazor— como en proyectos web más abiertos con WordPress. Esa mezcla me dio criterio para escribir código que resuelve problemas reales bajo reglas de negocio exigentes.",
@@ -13,24 +17,35 @@ export const profile = {
   ],
 };
 
-export const skills = [
-  {
-    category: "Backend",
-    items: ["Node.js", "C# / .NET", "Entity Framework", "TypeScript", "APIs REST", "Prisma"],
-  },
-  {
-    category: "Frontend",
-    items: ["Next.js", "React", "Tailwind CSS", "Blazor", "Razor"],
-  },
-  {
-    category: "Datos",
-    items: ["SQL", "Modelado de datos", "Migraciones"],
-  },
-  {
-    category: "Otros",
-    items: ["WordPress", "Git", "Soporte técnico", "Sistemas bancarios internos"],
-  },
+export const stats = [
+  { value: "3+", label: "Años de experiencia" },
+  { value: "3", label: "Proyectos reales construidos" },
+  { value: "2", label: "Stacks principales (Node/TS y C#/.NET)" },
+  { value: "100%", label: "Backend-first" },
 ];
+
+export const techRow = ["Node.js", "C#", ".NET", "TypeScript", "Next.js", "PostgreSQL"];
+
+export type SkillLevel = "Avanzado" | "Intermedio" | "Básico";
+
+export const skillLevelWidth: Record<SkillLevel, number> = {
+  Avanzado: 90,
+  Intermedio: 65,
+  Básico: 40,
+};
+
+export const coreSkills: { name: string; level: SkillLevel }[] = [
+  { name: "Node.js", level: "Avanzado" },
+  { name: "C# / .NET", level: "Avanzado" },
+  { name: "TypeScript", level: "Avanzado" },
+  { name: "Entity Framework", level: "Avanzado" },
+  { name: "SQL", level: "Avanzado" },
+  { name: "Prisma", level: "Avanzado" },
+  { name: "Next.js / React", level: "Intermedio" },
+  { name: "Tailwind CSS", level: "Intermedio" },
+];
+
+export const otherSkills = ["WordPress", "Git", "Blazor / Razor", "Sistemas bancarios internos"];
 
 export const experience = [
   {
@@ -79,5 +94,13 @@ export const projects: Project[] = [
     stack: ["Node.js", "TypeScript", "Prisma", "PostgreSQL"],
     status: "Completado",
     repo: "https://github.com/wandergdev/finance-api",
+  },
+  {
+    slug: "tucita",
+    title: "TuCita",
+    description:
+      "Web app para agendar citas con profesionales: gestión de disponibilidad, reservas y usuarios sobre un backend en C#/.NET con frontend en TypeScript. Proyecto personal en repositorio privado.",
+    stack: ["C#", ".NET", "TypeScript", "Docker"],
+    status: "En desarrollo",
   },
 ];
