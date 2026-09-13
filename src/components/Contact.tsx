@@ -3,23 +3,25 @@ import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-white/10">
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h2 className="font-mono text-sm text-emerald-400">05. Contacto</h2>
+    <section id="contact" className="border-t border-white/5">
+      <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+        <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-500">
+          Contacto
+        </h2>
 
-        <h3 className="mt-6 max-w-xl text-2xl font-semibold text-neutral-50 sm:text-3xl">
+        <h3 className="mt-6 max-w-lg text-3xl font-medium tracking-tight text-zinc-50 sm:text-4xl">
           ¿Tienes un proyecto backend en mente? Hablemos.
         </h3>
 
-        <p className="mt-4 max-w-xl text-neutral-400">
-          Estoy abierto a oportunidades y colaboraciones. La forma más directa
-          de contactarme es por correo.
+        <p className="mt-4 max-w-md text-zinc-400">
+          Estoy abierto a oportunidades y colaboraciones. La forma más directa de
+          contactarme es por correo.
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-9 flex flex-wrap gap-4">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-md bg-emerald-500 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-emerald-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-indigo-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-400"
           >
             <MailIcon className="h-4 w-4" />
             {profile.email}
@@ -28,7 +30,7 @@ export function Contact() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-200 transition-colors hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
           >
             <GitHubIcon className="h-4 w-4" />
             GitHub
@@ -38,7 +40,7 @@ export function Contact() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-200 transition-colors hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
           >
             <LinkedInIcon className="h-4 w-4" />
             LinkedIn
