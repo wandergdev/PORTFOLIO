@@ -1,18 +1,23 @@
-import { projects } from "@/data/portfolio";
+"use client";
+
+import { projectStatusLabel, projects } from "@/data/portfolio";
+import { useLanguage } from "@/context/LanguageProvider";
 import { ArrowUpRightIcon, GitHubIcon } from "./icons";
 
 const statusDot: Record<string, string> = {
-  Completado: "bg-emerald-500",
-  "En desarrollo": "bg-amber-500",
-  Planeado: "bg-zinc-600",
+  completed: "bg-emerald-500",
+  "in-progress": "bg-amber-500",
+  planned: "bg-zinc-600",
 };
 
 export function Projects() {
+  const { lang, t } = useLanguage();
+
   return (
     <section id="projects" className="border-t border-white/5">
       <div className="mx-auto max-w-5xl px-6 py-24 sm:py-28">
         <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-500">
-          Proyectos
+          {t.sectionProjects}
         </h2>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -32,11 +37,13 @@ export function Projects() {
                   <h3 className="text-base font-medium text-zinc-100">{project.title}</h3>
                   <span className="flex shrink-0 items-center gap-1.5 pt-1 text-xs text-zinc-500">
                     <span className={`h-1.5 w-1.5 rounded-full ${statusDot[project.status]}`} />
-                    {project.status}
+                    {projectStatusLabel[project.status][lang]}
                   </span>
                 </div>
 
-                <p className="text-sm leading-relaxed text-zinc-400">{project.description}</p>
+                <p className="text-sm leading-relaxed text-zinc-400">
+                  {project.description[lang]}
+                </p>
 
                 <p className="text-xs text-zinc-600">{project.stack.join(" · ")}</p>
 
@@ -49,7 +56,7 @@ export function Projects() {
                       className="inline-flex items-center gap-1.5 text-zinc-300 transition-colors hover:text-indigo-400"
                     >
                       <GitHubIcon className="h-4 w-4" />
-                      Código
+                      {t.code}
                     </a>
                   ) : null}
                   {project.demo ? (
@@ -59,12 +66,12 @@ export function Projects() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-zinc-300 transition-colors hover:text-indigo-400"
                     >
-                      Demo
+                      {t.demo}
                       <ArrowUpRightIcon className="h-3.5 w-3.5" />
                     </a>
                   ) : null}
                   {!project.repo && !project.demo ? (
-                    <span className="text-xs text-zinc-600">Repositorio privado</span>
+                    <span className="text-xs text-zinc-600">{t.privateRepo}</span>
                   ) : null}
                 </div>
               </div>

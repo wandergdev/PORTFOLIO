@@ -1,7 +1,12 @@
+"use client";
+
 import { profile } from "@/data/portfolio";
+import { useLanguage } from "@/context/LanguageProvider";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="mt-auto border-t border-white/5">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-8 text-xs text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
@@ -37,7 +42,7 @@ export function Footer() {
           </a>
         </div>
 
-        <p>Hecho con Next.js &amp; Tailwind CSS</p>
+        <p>{t.madeWith}</p>
       </div>
     </footer>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "@/context/LanguageProvider";
 import { profile } from "@/data/portfolio";
 import "./globals.css";
 
@@ -16,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.title}`,
-  description: profile.bio[0],
+  title: `${profile.name} — ${profile.title.es}`,
+  description: profile.bio.es[0],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,8 +28,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-neutral-950 text-neutral-200">
-        {children}
-        <Footer />
+        <LanguageProvider>
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

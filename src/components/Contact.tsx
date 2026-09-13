@@ -1,22 +1,24 @@
+"use client";
+
 import { profile } from "@/data/portfolio";
+import { useLanguage } from "@/context/LanguageProvider";
 import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 
 export function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="border-t border-white/5">
       <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
         <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-500">
-          Contacto
+          {t.sectionContact}
         </h2>
 
         <h3 className="mt-6 max-w-lg text-3xl font-medium tracking-tight text-zinc-50 sm:text-4xl">
-          ¿Tienes un proyecto backend en mente? Hablemos.
+          {t.contactHeadline}
         </h3>
 
-        <p className="mt-4 max-w-md text-zinc-400">
-          Estoy abierto a oportunidades y colaboraciones. La forma más directa de
-          contactarme es por correo.
-        </p>
+        <p className="mt-4 max-w-md text-zinc-400">{t.contactSub}</p>
 
         <div className="mt-9 flex flex-wrap gap-4">
           <a
