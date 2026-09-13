@@ -66,9 +66,10 @@ export const projects: Project[] = [
     slug: "auth-system",
     title: "Auth System",
     description:
-      "Sistema de autenticación y autorización reutilizable: JWT, refresh tokens, roles y 2FA. Pensado como base sólida de seguridad para aplicaciones reales (SaaS, e-commerce, sistemas internos).",
-    stack: ["Node.js", "TypeScript", "JWT", "SQL"],
-    status: "En desarrollo",
+      "Sistema de autenticación y autorización reutilizable: JWT con refresh tokens rotativos, roles y 2FA (TOTP). Pensado como base sólida de seguridad para aplicaciones reales (SaaS, e-commerce, sistemas internos).",
+    stack: ["C#", ".NET", "EF Core", "JWT", "SQLite"],
+    status: "Completado",
+    repo: "https://github.com/wandergdev/auth-system-dotnet",
   },
   {
     slug: "finanzas-api",
