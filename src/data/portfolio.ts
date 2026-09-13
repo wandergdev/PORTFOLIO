@@ -6,8 +6,8 @@ export const profile = {
   email: "wanderg.dev@gmail.com",
   github: "https://github.com/wandergdev",
   linkedin: "https://www.linkedin.com/in/wanderg-dev/",
-  /** Set to a real path (e.g. "/cv.pdf" in /public) once the CV file is added. */
-  cvUrl: null as string | null,
+  cvUrlEs: "/Wander-Genao-CV-ES.pdf",
+  cvUrlEn: "/Wander-Genao-CV-EN.pdf",
   /** Set to a real path (e.g. "/avatar.jpg" in /public) once the photo is added. */
   avatarUrl: null as string | null,
   bio: [

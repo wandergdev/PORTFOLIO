@@ -1,4 +1,5 @@
 import { profile, techRow } from "@/data/portfolio";
+import { withBasePath } from "@/lib/base-path";
 import { ArrowUpRightIcon } from "./icons";
 
 export function Hero() {
@@ -33,22 +34,20 @@ export function Hero() {
               Ver proyectos
               <ArrowUpRightIcon className="h-4 w-4" />
             </a>
-            {profile.cvUrl ? (
-              <a
-                href={profile.cvUrl}
-                download
-                className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
-              >
-                Descargar CV
-              </a>
-            ) : (
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
-              >
-                Contactarme
-              </a>
-            )}
+            <a
+              href={withBasePath(profile.cvUrlEs)}
+              download
+              className="inline-flex items-center gap-2 rounded-lg border border-zinc-800 px-5 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-700 hover:text-zinc-100"
+            >
+              Descargar CV
+            </a>
+            <a
+              href={withBasePath(profile.cvUrlEn)}
+              download
+              className="text-sm text-zinc-500 underline decoration-zinc-700 underline-offset-4 transition-colors hover:text-zinc-300"
+            >
+              English version
+            </a>
           </div>
 
           <div className="pt-8">
@@ -75,7 +74,7 @@ export function Hero() {
             {profile.avatarUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={profile.avatarUrl}
+                src={withBasePath(profile.avatarUrl)}
                 alt={profile.name}
                 className="h-full w-full object-cover"
               />
