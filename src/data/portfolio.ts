@@ -11,7 +11,7 @@ export const profile = {
   /** Set to a real path (e.g. "/avatar.jpg" in /public) once the photo is added. */
   avatarUrl: null as string | null,
   bio: [
-    "Soy Ingeniero en Sistemas de Computación (UCATECI, La Vega, RD) enfocado en construir backends robustos y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
+    "Soy Ingeniero en Sistemas de Computación, enfocado en construir backends robustos y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
     "He trabajado tanto en entornos corporativos regulados —desarrollando soluciones internas para un banco con C#, .NET, Entity Framework y Blazor— como en proyectos web más abiertos con WordPress. Esa mezcla me dio criterio para escribir código que resuelve problemas reales bajo reglas de negocio exigentes.",
     "Hoy sigo ampliando mi stack hacia Node.js, TypeScript, Next.js y Prisma, aplicando la misma disciplina backend a proyectos propios: autenticación segura, APIs con lógica de negocio real y buenas prácticas de datos.",
   ],
@@ -24,7 +24,14 @@ export const stats = [
   { value: "100%", label: "Backend-first" },
 ];
 
-export const techRow = ["Node.js", "C#", ".NET", "TypeScript", "Next.js", "PostgreSQL"];
+export const techRow = [
+  "Node.js",
+  "C#",
+  ".NET",
+  "TypeScript",
+  "Next.js",
+  "PostgreSQL",
+];
 
 export type SkillLevel = "Avanzado" | "Intermedio" | "Básico";
 
@@ -45,7 +52,12 @@ export const coreSkills: { name: string; level: SkillLevel }[] = [
   { name: "Tailwind CSS", level: "Intermedio" },
 ];
 
-export const otherSkills = ["WordPress", "Git", "Blazor / Razor", "Sistemas bancarios internos"];
+export const otherSkills = [
+  "WordPress",
+  "Git",
+  "Blazor / Razor",
+  "Sistemas bancarios internos",
+];
 
 export const experience = [
   {
