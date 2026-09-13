@@ -75,8 +75,9 @@ export const projects: Project[] = [
     slug: "finanzas-api",
     title: "API de Finanzas Personales",
     description:
-      "API con lógica de negocio real: validaciones, cálculos, reportes y manejo de fechas para el control de finanzas personales, modelada con Prisma sobre una base de datos relacional.",
-    stack: ["Node.js", "TypeScript", "Prisma", "SQL"],
-    status: "En desarrollo",
+      "API con lógica de negocio real: transacciones y categorías con aislamiento por usuario, presupuestos mensuales con alertas de sobregiro, y reportes de balance, gasto por categoría y resumen mensual.",
+    stack: ["Node.js", "TypeScript", "Prisma", "PostgreSQL"],
+    status: "Completado",
+    repo: "https://github.com/wandergdev/finance-api",
   },
 ];
