@@ -2,7 +2,7 @@ export type Lang = "es" | "en";
 
 export const profile = {
   name: "Wander Genao",
-  title: { es: "Backend Developer", en: "Backend Developer" },
+  title: { es: "Desarrollador de Software", en: "Software Developer" },
   subtitle: "Node.js · C# / .NET · TypeScript",
   location: "Bonao, República Dominicana",
   email: "wanderg.dev@gmail.com",
@@ -13,12 +13,12 @@ export const profile = {
   avatarUrl: "/avatar.jpg" as string | null,
   bio: {
     es: [
-      "Soy Ingeniero en Sistemas de Computación, enfocado en construir backends robustos y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
+      "Soy Ingeniero en Sistemas de Computación y desarrollador de software con especialización en backend, enfocado en construir soluciones robustas y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
       "He trabajado tanto en entornos corporativos regulados —desarrollando soluciones internas para un banco con C#, .NET, Entity Framework y Blazor— como en proyectos web más abiertos con WordPress. Esa mezcla me dio criterio para escribir código que resuelve problemas reales bajo reglas de negocio exigentes.",
       "Hoy sigo ampliando mi stack hacia Node.js, TypeScript, Next.js y Prisma, aplicando la misma disciplina backend a proyectos propios: autenticación segura, APIs con lógica de negocio real y buenas prácticas de datos.",
     ],
     en: [
-      "I'm a Computer Systems Engineer focused on building robust, reliable backends, with enough frontend sense to ship complete, well-designed products.",
+      "I'm a Computer Systems Engineer and software developer specialized in backend, focused on building robust, reliable solutions, with enough frontend sense to ship complete, well-designed products.",
       "I've worked both in regulated corporate environments —building internal solutions for a bank with C#, .NET, Entity Framework and Blazor— and on more open web projects with WordPress. That mix gave me the judgment to write code that solves real problems under demanding business rules.",
       "Today I keep expanding my stack toward Node.js, TypeScript, Next.js and Prisma, applying that same backend discipline to my own projects: secure authentication, APIs with real business logic, and solid data practices.",
     ],
@@ -32,7 +32,7 @@ export const stats = [
     value: "2",
     label: { es: "Stacks principales (Node/TS y C#/.NET)", en: "Core stacks (Node/TS & C#/.NET)" },
   },
-  { value: "100%", label: { es: "Backend-first", en: "Backend-first" } },
+  { value: "100%", label: { es: "Enfoque en backend", en: "Backend-focused" } },
 ];
 
 export const techRow = ["Node.js", "C#", ".NET", "TypeScript", "Next.js", "PostgreSQL"];
