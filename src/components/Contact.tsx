@@ -9,7 +9,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="border-t border-white/5">
-      <div className="mx-auto max-w-5xl px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
         <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-500">
           {t.sectionContact}
         </h2>

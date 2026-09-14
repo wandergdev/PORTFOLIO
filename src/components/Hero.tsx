@@ -13,7 +13,7 @@ export function Hero() {
   const secondaryCv = lang === "es" ? profile.cvUrlEn : profile.cvUrlEs;
 
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pt-20 pb-24 sm:pt-28 sm:pb-32">
+    <section id="top" className="mx-auto max-w-5xl px-6 pt-14 pb-16 sm:pt-20 sm:pb-24">
       <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col gap-6">
           <span className="inline-flex w-fit items-center rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-indigo-400">
