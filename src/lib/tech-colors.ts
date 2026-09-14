@@ -26,6 +26,7 @@ export const techColors: Record<string, string> = {
   HTML: "#E34C26",
   CSS: "#2965F1",
   Docker: "#2496ED",
+  Electron: "#9FEAF9",
   JWT: "#F59E0B",
   Git: "#F05032",
   "AWS Lambda": "#FF9900",

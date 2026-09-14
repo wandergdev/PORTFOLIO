@@ -163,4 +163,15 @@ export const projects: Project[] = [
     status: "in-progress",
     url: "https://tucita.site/",
   },
+  {
+    slug: "clipmenu",
+    title: "ClipMenu",
+    description: {
+      es: "Gestor de portapapeles para macOS hecho con Electron: guarda automáticamente el historial de texto e imágenes copiados y lo abre desde cualquier app con ⌘+Shift+V, similar a Win+V de Windows.",
+      en: "Clipboard manager for macOS built with Electron: automatically saves a history of copied text and images, opened from any app with ⌘+Shift+V — similar to Windows' Win+V.",
+    },
+    stack: ["Electron", "JavaScript", "HTML", "CSS"],
+    status: "completed",
+    repo: "https://github.com/wandergdev/ClipMenu",
+  },
 ];
