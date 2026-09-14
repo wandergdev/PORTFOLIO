@@ -24,9 +24,9 @@ export const dictionary = {
     sectionProjects: "Proyectos",
     sectionContact: "Contacto",
     alsoWorkedWith: "También he trabajado con",
-    contactHeadline: "¿Tienes un proyecto backend en mente? Hablemos.",
+    contactHeadline: "¿Tienes un proyecto en mente? Hablemos.",
     contactSub:
-      "Estoy abierto a oportunidades y colaboraciones. La forma más directa de contactarme es por correo.",
+      "Estoy abierto a colaborar en proyectos de cualquier tipo, no solo backend. La forma más directa de contactarme es por correo.",
     code: "Código",
     demo: "Demo",
     privateRepo: "Repositorio privado",
@@ -55,9 +55,9 @@ export const dictionary = {
     sectionProjects: "Projects",
     sectionContact: "Contact",
     alsoWorkedWith: "I've also worked with",
-    contactHeadline: "Have a backend project in mind? Let's talk.",
+    contactHeadline: "Have a project in mind? Let's talk.",
     contactSub:
-      "I'm open to opportunities and collaborations. The most direct way to reach me is by email.",
+      "I'm open to collaborating on all kinds of projects, not just backend. The most direct way to reach me is by email.",
     code: "Code",
     demo: "Demo",
     privateRepo: "Private repository",
