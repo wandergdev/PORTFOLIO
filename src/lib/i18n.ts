@@ -28,7 +28,7 @@ export const dictionary = {
     contactSub:
       "Estoy abierto a colaborar en proyectos de cualquier tipo, no solo backend. La forma más directa de contactarme es por correo.",
     code: "Código",
-    demo: "Demo",
+    visitSite: "Visitar sitio",
     privateRepo: "Repositorio privado",
     madeWith: "Hecho con Next.js & Tailwind CSS",
   },
@@ -59,7 +59,7 @@ export const dictionary = {
     contactSub:
       "I'm open to collaborating on all kinds of projects, not just backend. The most direct way to reach me is by email.",
     code: "Code",
-    demo: "Demo",
+    visitSite: "Visit site",
     privateRepo: "Private repository",
     madeWith: "Built with Next.js & Tailwind CSS",
   },

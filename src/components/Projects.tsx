@@ -59,18 +59,18 @@ export function Projects() {
                       {t.code}
                     </a>
                   ) : null}
-                  {project.demo ? (
+                  {project.url ? (
                     <a
-                      href={project.demo}
+                      href={project.url}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-zinc-300 transition-colors hover:text-indigo-400"
                     >
-                      {t.demo}
+                      {t.visitSite}
                       <ArrowUpRightIcon className="h-3.5 w-3.5" />
                     </a>
                   ) : null}
-                  {!project.repo && !project.demo ? (
+                  {!project.repo && !project.url ? (
                     <span className="text-xs text-zinc-600">{t.privateRepo}</span>
                   ) : null}
                 </div>

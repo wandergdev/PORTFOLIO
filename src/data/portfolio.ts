@@ -106,7 +106,8 @@ export type Project = {
   stack: string[];
   status: ProjectStatusKey;
   repo?: string;
-  demo?: string;
+  /** Live production site — distinct from a throwaway "demo". */
+  url?: string;
 };
 
 export const projects: Project[] = [
@@ -136,10 +137,11 @@ export const projects: Project[] = [
     slug: "tucita",
     title: "TuCita",
     description: {
-      es: "Web app para agendar citas con profesionales: gestión de disponibilidad, reservas y usuarios sobre un backend en C#/.NET con frontend en TypeScript. Proyecto personal en repositorio privado.",
-      en: "Web app for booking appointments with professionals: availability, bookings, and user management on a C#/.NET backend with a TypeScript frontend. Personal project in a private repository.",
+      es: "Web app para agendar citas con profesionales: gestión de disponibilidad, reservas y usuarios sobre un backend en C#/.NET con frontend en TypeScript. Código en repositorio privado.",
+      en: "Web app for booking appointments with professionals: availability, bookings, and user management on a C#/.NET backend with a TypeScript frontend. Code in a private repository.",
     },
     stack: ["C#", ".NET", "TypeScript", "Docker"],
     status: "in-progress",
+    url: "https://tucita.site/",
   },
 ];
