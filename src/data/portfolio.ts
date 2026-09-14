@@ -10,8 +10,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/wanderg-dev/",
   cvUrlEs: "/Wander-Genao-CV-ES.pdf",
   cvUrlEn: "/Wander-Genao-CV-EN.pdf",
-  /** Set to a real path (e.g. "/avatar.jpg" in /public) once the photo is added. */
-  avatarUrl: null as string | null,
+  avatarUrl: "/avatar.jpg" as string | null,
   bio: {
     es: [
       "Soy Ingeniero en Sistemas de Computación, enfocado en construir backends robustos y confiables, con suficiente ojo de frontend para entregar productos completos y con buen diseño.",
