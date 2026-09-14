@@ -2,6 +2,7 @@
 
 import { projectStatusLabel, projects } from "@/data/portfolio";
 import { useLanguage } from "@/context/LanguageProvider";
+import { techColor } from "@/lib/tech-colors";
 import { ArrowUpRightIcon, GitHubIcon } from "./icons";
 
 const statusDot: Record<string, string> = {
@@ -10,23 +11,31 @@ const statusDot: Record<string, string> = {
   planned: "bg-zinc-600",
 };
 
+const cardGradients = [
+  "from-indigo-500/20 via-zinc-900 to-zinc-950",
+  "from-fuchsia-500/20 via-zinc-900 to-zinc-950",
+  "from-cyan-500/20 via-zinc-900 to-zinc-950",
+];
+
 export function Projects() {
   const { lang, t } = useLanguage();
 
   return (
     <section id="projects" className="border-t border-white/5">
-      <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+      <div className="mx-auto max-w-5xl px-6 py-10 sm:py-14">
         <h2 className="text-sm font-medium uppercase tracking-widest text-zinc-500">
           {t.sectionProjects}
         </h2>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <article
               key={project.slug}
               className="flex flex-col overflow-hidden rounded-xl border border-white/5 bg-white/[0.02] transition-colors hover:border-white/10"
             >
-              <div className="relative flex h-28 items-center justify-center bg-gradient-to-br from-indigo-500/15 via-zinc-900 to-zinc-950">
+              <div
+                className={`relative flex h-28 items-center justify-center bg-gradient-to-br ${cardGradients[index % cardGradients.length]}`}
+              >
                 <span className="font-[family-name:var(--font-heading)] text-3xl font-semibold text-white/10">
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -45,7 +54,20 @@ export function Projects() {
                   {project.description[lang]}
                 </p>
 
-                <p className="text-xs text-zinc-600">{project.stack.join(" · ")}</p>
+                <div className="flex flex-wrap gap-x-3 gap-y-1.5">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="inline-flex items-center gap-1.5 text-xs text-zinc-500"
+                    >
+                      <span
+                        className="h-1.5 w-1.5 rounded-full"
+                        style={{ backgroundColor: techColor(tech) }}
+                      />
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="mt-auto flex gap-5 pt-1 text-sm">
                   {project.repo ? (

@@ -3,6 +3,7 @@
 import { profile, techRow } from "@/data/portfolio";
 import { useLanguage } from "@/context/LanguageProvider";
 import { withBasePath } from "@/lib/base-path";
+import { techColor } from "@/lib/tech-colors";
 import { ArrowUpRightIcon } from "./icons";
 
 export function Hero() {
@@ -13,9 +14,9 @@ export function Hero() {
   const secondaryCv = lang === "es" ? profile.cvUrlEn : profile.cvUrlEs;
 
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pt-14 pb-16 sm:pt-20 sm:pb-24">
-      <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="flex flex-col gap-6">
+    <section id="top" className="mx-auto max-w-5xl px-6 pt-10 pb-12 sm:pt-14 sm:pb-16">
+      <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="flex flex-col gap-5">
           <span className="inline-flex w-fit items-center rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-indigo-400">
             {t.heroBadge}
           </span>
@@ -29,7 +30,7 @@ export function Hero() {
 
           <p className="text-sm text-zinc-600">{profile.location}</p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-4 pt-1">
             <a
               href="#projects"
               className="inline-flex items-center gap-2 rounded-lg bg-indigo-500 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-400"
@@ -53,16 +54,20 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="pt-8">
+          <div className="pt-5">
             <p className="text-xs font-medium uppercase tracking-widest text-zinc-600">
               {t.techLabel}
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               {techRow.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-md border border-white/5 bg-white/[0.02] px-3 py-1.5 text-xs text-zinc-400"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-white/5 bg-white/[0.02] px-3 py-1.5 text-xs text-zinc-300"
                 >
+                  <span
+                    className="h-1.5 w-1.5 rounded-full"
+                    style={{ backgroundColor: techColor(tech) }}
+                  />
                   {tech}
                 </span>
               ))}
@@ -71,7 +76,7 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-indigo-500/20 blur-3xl" />
+          <div className="absolute inset-0 -z-10 scale-110 rounded-full bg-gradient-to-br from-indigo-500/25 via-fuchsia-500/15 to-cyan-400/20 blur-3xl" />
 
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-zinc-900 to-zinc-950">
             {profile.avatarUrl ? (
