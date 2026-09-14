@@ -27,9 +27,11 @@ export function Experience() {
               </div>
 
               <div>
-                <p className="max-w-xl text-sm leading-relaxed text-zinc-400">
-                  {job.description[lang]}
-                </p>
+                <ul className="max-w-xl list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-zinc-400 marker:text-zinc-600">
+                  {job.description[lang].map((line) => (
+                    <li key={line.slice(0, 24)}>{line}</li>
+                  ))}
+                </ul>
                 <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
                   {job.stack.map((tech) => (
                     <span
