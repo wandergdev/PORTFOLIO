@@ -3,7 +3,7 @@
  * raw `<a href>`/`<img src>` values are not auto-prefixed like next/link and
  * next/image are — anything under /public needs this prepended by hand.
  */
-export const BASE_PATH = "/PORTFOLIO";
+export const BASE_PATH = "/portfolio";
 
 export function withBasePath(path: string): string {
   return `${BASE_PATH}${path}`;
